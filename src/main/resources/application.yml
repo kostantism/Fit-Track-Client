@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: fit-track-client
+  main:
+    web-application-type: none
+
+fittrack:
+  api:
+    base-url: http://localhost:8080
