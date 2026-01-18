@@ -22,7 +22,6 @@ public class FitTrackApiClient {
         this.baseUrl = baseUrl;
     }
 
-    // 🔐 LOGIN
     public void login(String username, String password) {
 
         LoginRequest request = new LoginRequest(username, password);
@@ -43,7 +42,6 @@ public class FitTrackApiClient {
         System.out.println("Logged in, JWT acquired");
     }
 
-    // 🆕 REGISTER
     public void register(RegisterRequest request) {
 
         ResponseEntity<RegisterResponse> response =
@@ -68,28 +66,10 @@ public class FitTrackApiClient {
                 + response.getBody().personView().emailAddress());
     }
 
-    // 🔒 AUTH HEADER
     private HttpHeaders authHeaders() {
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(jwt);
         return headers;
     }
 
-//    // 📌 Secured GET
-//    public void getMyAppointments() {
-//
-//        HttpEntity<Void> entity =
-//                new HttpEntity<>(authHeaders());
-//
-//        ResponseEntity<String> response =
-//                restTemplate.exchange(
-//                        baseUrl + "/api/customer/appointments",
-//                        HttpMethod.GET,
-//                        entity,
-//                        String.class
-//                );
-//
-//        System.out.println("Appointments:");
-//        System.out.println(response.getBody());
-//    }
 }

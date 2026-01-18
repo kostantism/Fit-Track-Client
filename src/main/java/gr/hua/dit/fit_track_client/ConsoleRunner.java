@@ -1,28 +1,5 @@
 package gr.hua.dit.fit_track_client;
 
-//
-//import gr.hua.dit.fit_track_client.client.FitTrackApiClient;
-//import org.springframework.boot.CommandLineRunner;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.context.annotation.Configuration;
-//
-//@Configuration
-//public class ConsoleRunner {
-//
-//    @Bean
-//    CommandLineRunner run(FitTrackApiClient client) {
-//        return args -> {
-//
-//            // 👤 credentials από FitTrack DB
-//            client.login("customer1", "password");
-//
-//            // 🔐 JWT protected call
-//            client.getMyAppointments();
-//        };
-//    }
-//}
-
-
 import gr.hua.dit.fit_track_client.client.FitTrackApiClient;
 import gr.hua.dit.fit_track_client.dto.PersonType;
 import gr.hua.dit.fit_track_client.dto.RegisterRequest;
@@ -52,6 +29,5 @@ public class ConsoleRunner implements CommandLineRunner {
 
         api.login("kostas@test.com", "1234");
 
-//        api.getMyAppointments();
     }
 }
